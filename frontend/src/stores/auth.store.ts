@@ -62,7 +62,7 @@ export const useAuthStore = defineStore('auth', () => {
     try {
       const payload = {
         id: user.id,
-        name: 'test',
+        name: user.name,
         email: user.email,
         loginAt: Math.floor(Date.now() / 1000),
       };

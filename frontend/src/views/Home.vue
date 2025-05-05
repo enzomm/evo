@@ -3,10 +3,9 @@
   import { userColumns } from '@/components/tables/user/columns';
   import { ref, onMounted } from 'vue';
   import { UserService } from '@/services/user';
-  import type { User } from '@/data/schema';
   import { toast } from '@/components/ui/toast/use-toast';
 
-  const users = ref<User[]>([]);
+  const users = ref([]);
 
   onMounted(async () => {
     try {

@@ -25,6 +25,14 @@
 
   const formSchema = toTypedSchema(
     z.object({
+      name: z
+        .string()
+        .min(3, {
+          message: 'Deve ter pelo menos 3 caracteres.',
+        })
+        .max(64, {
+          message: 'Não deve ter mais de 64 caracteres.',
+        }),
       email: z
         .string()
         .email({ message: 'Deve ser um e-mail válido.' })
@@ -60,7 +68,7 @@
   const onSubmit = handleSubmit(async (values) => {
     loading.value = true;
     try {
-      await UserService.register(values.email, values.password);
+      await UserService.register(values.name, values.email, values.password);
       toast({
         title: 'Sucesso!',
         description: 'Cadastro concluído! Agora faça login na sua conta.',
@@ -119,6 +127,27 @@
             </div>
             <div class="divide-y divide-gray-200">
               <form class="grid items-start gap-4 px-4 py-8" @submit="onSubmit">
+                <FormField
+                  v-slot="{ componentField }"
+                  name="name"
+                  :validate-on-blur="!isFieldDirty"
+                  class="grid gap-2"
+                >
+                  <FormItem v-auto-animate>
+                    <FormLabel>Nome</FormLabel>
+                    <FormControl>
+                      <Input
+                        type="text"
+                        placeholder="Meu Nome..."
+                        v-bind="componentField"
+                        required
+                        autocomplete="off"
+                      />
+                    </FormControl>
+                    <FormDescription>Qual o seu nome?</FormDescription>
+                    <FormMessage />
+                  </FormItem>
+                </FormField>
                 <FormField
                   v-slot="{ componentField }"
                   name="email"
