@@ -4,6 +4,7 @@ from pydantic import UUID4, BaseModel, ConfigDict, EmailStr, model_validator
 
 
 class UserSchema(BaseModel):
+    name: str
     email: EmailStr
     password: str
 
@@ -24,6 +25,7 @@ class UserResponse(BaseModel):
 
     id: int
     uuid: UUID4
+    name: str
     email: EmailStr
 
 
