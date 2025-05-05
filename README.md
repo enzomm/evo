@@ -8,11 +8,9 @@ Caso seu OS for Windows, recomenda-se para o ambiente usar o WSL em instância D
 
 ### Docker/Docker-Compose
 
-Para rodar o projeto usando docker siga os passos abaixo:
+Com o docker-compose é possível subir a imagem da API e o banco POSTGRES. 
 
-- Com o docker-compose é possível subir a imagem da API e o banco POSTGRES;
-- Será necessário um arquivo .env na raíz do projeto com as variáveis de ambiente;
-- Com o docker e docker-compose instalado na sua máquina e o arquivo .env configurado na pasta do projeto basta rodar o seguinte comando no seu terminal:
+- Com o docker e docker-compose instalado na sua máquina, basta rodar o seguinte comando no seu terminal:
 
 ```bash
     # Você deve estar no diretório do projeto onde está o arquivo docker-compose.yml
@@ -93,14 +91,14 @@ App desenvolvido em Vue.js 3 usando o framework Vite.
 
 ## Setup
 
-Instale o **node.js** na sua máquina e tendo o arquivo **.env** (variáveis de ambiente) configurado na raiz do projeto, basta rodar os seguintes comandos no seu terminal:
+Instale o **node.js** na sua máquina e basta rodar os seguintes comandos no seu terminal:
 
 ```bash
     # Você deve estar no diretório do projeto onde está o arquivo package.json
 
     # Instalar as dependências
     $ npm install
-    # Rodar
+    # Rodar o projeto
     $ npm run dev
 ```
 
