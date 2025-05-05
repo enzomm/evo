@@ -104,4 +104,4 @@ Instale o **node.js** na sua máquina e tendo o arquivo **.env** (variáveis de 
     $ npm run dev
 ```
 
-- Se tudo funcionou corretamente você pode acessar a plataforma pelo seu browser no endereço **<http://127.0.0.1:5173>**
+- Se tudo funcionou corretamente você pode acessar a plataforma pelo seu browser no endereço **<http://localhost:5173/>**

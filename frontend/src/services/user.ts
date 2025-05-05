@@ -14,6 +14,9 @@ const UserService = {
       throw new Error('Erro desconhecido ao tentar realizar o cadastro.');
     }
   },
+  getAllUsers: async () => {
+    return await http.get('/users');
+  },
 };
 
 export { UserService };
